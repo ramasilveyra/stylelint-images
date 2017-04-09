@@ -1,0 +1,48 @@
+{
+  "name": "stylelint-images",
+  "version": "1.0.0",
+  "description": "A collection of rules to check images for stylelint",
+  "main": "build/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel src -d build -s --ignore __test__",
+    "lint": "eslint .",
+    "test": "tape -r babel-register \"src/**/__test__/*.js\" | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramasilveyra/stylelint-images.git"
+  },
+  "keywords": [
+    "stylelint-plugin",
+    "stylelint"
+  ],
+  "author": "Ramiro Silveyra d'Avila (@ramasilveyra)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ramasilveyra/stylelint-images/issues"
+  },
+  "homepage": "https://github.com/ramasilveyra/stylelint-images#readme",
+  "dependencies": {
+    "axios": "0.16.1",
+    "stylelint": "^7.10.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.10.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.3.3",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-register": "^6.24.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "stylelint-test-rule-tape": "^0.2.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "files": [
+    "build"
+  ]
+}
