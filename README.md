@@ -52,7 +52,7 @@ Please refer to [stylelint docs](http://stylelint.io/user-guide/) for the detail
 ### List of rules
 
 - [`broken`](./src/rules/broken/README.md): Checks if the images are broken.
-- [`prefer-data-uri`](./src/rules/prefer-data-uri/README.md): Suggest using data-URIs instead of an external image if their file size (in bytes) exceeds the limit.
+- [`prefer-data-uri`](./src/rules/prefer-data-uri/README.md): Suggest using data-URIs instead of an external image if its file size (in bytes) is smaller than the limit.
 
 ## Contribute
 

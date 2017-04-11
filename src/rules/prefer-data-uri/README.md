@@ -1,10 +1,10 @@
 # prefer-data-uri
 
-Suggest using data-URIs instead of an external image if their file size (in bytes) exceeds the limit.
+Suggest using data-URIs instead of an external image if its file size (in bytes) is smaller than the limit.
 
 ## Options
 
-`number`: Maximum file size (in bytes) allowed as external image.
+`number`: Limit of file size (in bytes) allowed as data-URI image.
 
 For example, with `3000`:
 
