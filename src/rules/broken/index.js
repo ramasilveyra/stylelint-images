@@ -3,24 +3,26 @@ import { namespace, generateListOfImagesURLsAndNodes, getImage } from '../../uti
 
 export const ruleName = namespace('broken');
 export const messages = utils.ruleMessages(ruleName, {
-  broken: imageURL => `The image "${imageURL}" it's broken.`
+  unexpected: imageURL => `Unexpected broken image "${imageURL}"`
 });
 
-export default enabled => (root, result) => {
-  const validOptions = utils.validateOptions(result, ruleName, {
-    actual: enabled,
-    possible: [true, false]
-  });
+export default function brokenRule(enabled) {
+  return (root, result) => {
+    const validOptions = utils.validateOptions(result, ruleName, {
+      actual: enabled,
+      possible: [true, false]
+    });
 
-  if (!validOptions) {
-    return null;
-  }
+    if (!validOptions) {
+      return null;
+    }
 
-  const list = generateListOfImagesURLsAndNodes(root);
+    const list = generateListOfImagesURLsAndNodes(root);
 
-  return checkIfImagesExists(list, result)
-    .then(results => reportBrokenImages(results, result));
-};
+    return checkIfImagesExists(list, result)
+      .then(results => reportBrokenImages(results, result));
+  };
+}
 
 function checkIfImagesExists(list) {
   const checkList = list.map(listItem =>
@@ -48,6 +50,6 @@ function reportBrokenImages(results, result) {
     .filter(resultItem => resultItem instanceof Error)
     .forEach((resultError) => {
       const { node, url } = resultError.nodeAndURL;
-      utils.report({ message: messages.broken(url), node, result, ruleName });
+      utils.report({ message: messages.unexpected(url), node, result, ruleName });
     });
 }

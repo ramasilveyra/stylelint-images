@@ -36,7 +36,7 @@ testRule(broken, {
       code: `.foo1 {
         background: url('${imageBroken}');
       }`,
-      message: messages.broken(imageBroken),
+      message: messages.unexpected(imageBroken),
       line: 2,
       column: 9
     },
@@ -44,7 +44,7 @@ testRule(broken, {
       code: `.foo1 {
         background-image: url("${imageBroken}");
       }`,
-      message: messages.broken(imageBroken),
+      message: messages.unexpected(imageBroken),
       line: 2,
       column: 9
     },
@@ -52,7 +52,7 @@ testRule(broken, {
       code: `.foo1 {
         background-image: url("${imageValid}"), url("${imageBroken}");
       }`,
-      message: messages.broken(imageBroken),
+      message: messages.unexpected(imageBroken),
       line: 2,
       column: 9
     },
@@ -60,7 +60,7 @@ testRule(broken, {
       code: `.foo1 {
         content: url("${imageBroken}");
       }`,
-      message: messages.broken(imageBroken),
+      message: messages.unexpected(imageBroken),
       line: 2,
       column: 9
     }
