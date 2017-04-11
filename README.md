@@ -32,7 +32,7 @@ yarn add stylelint@^7.10.0 stylelint-images -D
 
 ## Usage
 
-Create the `.stylelintrc.json` config file (or open the existing one), add `stylelint-images` to the plugins array and the rules you need to the rules list. All rules from stylelint-images need to be namespaced with `scss`.
+Create the `.stylelintrc.json` config file (or open the existing one), add `stylelint-images` to the plugins array and the rules you need to the rules list. All rules from stylelint-images need to be namespaced with `images`.
 
 ```json
 {
