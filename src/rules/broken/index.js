@@ -38,18 +38,20 @@ function settlePromise(promise) {
 
 function checkIfImageExists(listItem) {
   return getImage(listItem.url)
+    .then(() => {})
     .catch((error) => {
-      error.nodeAndURL = listItem;
+      if (error.response && error.response.status === 404) {
+        return listItem;
+      }
 
-      return Promise.reject(error);
+      return null;
     });
 }
 
 function reportBrokenImages(results, result) {
   results
-    .filter(resultItem => resultItem instanceof Error)
-    .forEach((resultError) => {
-      const { node, url } = resultError.nodeAndURL;
+    .filter(resultItem => !!(resultItem))
+    .forEach(({ node, url }) => {
       utils.report({ message: messages.unexpected(url), node, result, ruleName });
     });
 }
