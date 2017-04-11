@@ -42,6 +42,7 @@ Create the `.stylelintrc.json` config file (or open the existing one), add `styl
   "rules": {
     "images/broken": true,
     "images/prefer-data-uri": 256,
+    "images/unoptimized": true,
     ...
   }
 }
@@ -53,6 +54,7 @@ Please refer to [stylelint docs](http://stylelint.io/user-guide/) for the detail
 
 - [`broken`](./src/rules/broken/README.md): Checks if the images are broken.
 - [`prefer-data-uri`](./src/rules/prefer-data-uri/README.md): Suggest using data-URIs instead of an external image if their file size (in bytes) exceeds the limit.
+- [`unoptimized`](./src/rules/unoptimized/README.md): Checks if the images are unoptimized.
 
 ## Contribute
 
