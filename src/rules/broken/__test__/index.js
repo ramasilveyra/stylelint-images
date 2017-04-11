@@ -1,8 +1,8 @@
 import testRule from 'stylelint-test-rule-tape';
 import broken, { ruleName, messages } from '../index';
 
-const imageValid = 'https://cdn.auth0.com/styleguide/components/1.0.5/media/breadcrumb/img/home-icon-light.svg';
-const imageBroken = 'https://cdn.auth0.com/this-image-doesnt-exist.svg';
+const imageValid = 'https://ramasilveyra.github.io/stylelint-images/media/image-1.png';
+const imageBroken = 'https://ramasilveyra.github.io/stylelint-images/media/doesn-exist.png';
 
 testRule(broken, {
   ruleName,

@@ -10,19 +10,19 @@ The following patterns are considered warnings:
 
 ```css
 .header {
-  background-image: url('https://site.com/this-image-doesnt-exist.svg');
+  background-image: url('https://ramasilveyra.github.io/stylelint-images/media/doesn-exist.png');
 }
 ```
 
 ```css
 .header {
-  background: url('https://site.com/this-image-doesnt-exist.svg');
+  background: url('https://ramasilveyra.github.io/stylelint-images/media/doesn-exist.png');
 }
 ```
 
 ```css
 .header {
-  content: url('https://site.com/this-image-doesnt-exist.svg');
+  content: url('https://ramasilveyra.github.io/stylelint-images/media/doesn-exist.png');
 }
 ```
 
@@ -30,18 +30,18 @@ The following patterns are not considered warnings:
 
 ```css
 .header {
-  background-image: url('https://site.com/this-image-exist.svg');
+  background-image: url('https://ramasilveyra.github.io/stylelint-images/media/image-1.png');
 }
 ```
 
 ```css
 .header {
-  background: url('https://site.com/this-image-exist.svg');
+  background: url('https://ramasilveyra.github.io/stylelint-images/media/image-1.png');
 }
 ```
 
 ```css
 .header {
-  content: url('https://site.com/this-image-exist.svg');
+  content: url('https://ramasilveyra.github.io/stylelint-images/media/image-1.png');
 }
 ```
