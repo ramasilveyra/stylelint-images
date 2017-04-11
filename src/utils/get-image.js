@@ -7,7 +7,7 @@ export default function getImage(url) {
     return preservePromiseMethods(cacheImageResults.get(url));
   }
 
-  return axios.get(url)
+  return axios.get(url, { responseType: 'arraybuffer' })
     .then((response) => {
       cacheImageResults.set(url, response);
       return response;
