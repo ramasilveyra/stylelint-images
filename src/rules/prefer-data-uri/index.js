@@ -27,13 +27,9 @@ export default function ruleDataURI(limitBytes) {
 }
 
 function checkImagesSizes(list) {
-  const checkList = list.map(listItem => settlePromise(getImageAndSize(listItem)));
+  const checkList = list.map(getImageAndSize);
 
   return Promise.all(checkList);
-}
-
-function settlePromise(promise) {
-  return promise.catch(listItemError => listItemError);
 }
 
 function getImageAndSize(listItem) {

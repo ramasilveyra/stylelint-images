@@ -25,22 +25,16 @@ export default function brokenRule(enabled) {
 }
 
 function checkIfImagesExists(list) {
-  const checkList = list.map(listItem =>
-    settlePromise(checkIfImageExists(listItem))
-  );
+  const checkList = list.map(checkIfImageExists);
 
   return Promise.all(checkList);
-}
-
-function settlePromise(promise) {
-  return promise.catch(listItemError => listItemError);
 }
 
 function checkIfImageExists(listItem) {
   return getImage(listItem.url)
     .then(() => {})
     .catch((error) => {
-      if (error.response && error.response.status === 404) {
+      if (error && error.response && error.response.status === 404) {
         return listItem;
       }
 
@@ -50,7 +44,7 @@ function checkIfImageExists(listItem) {
 
 function reportBrokenImages(results, result) {
   results
-    .filter(resultItem => !!(resultItem))
+    .filter(resultItem => !!resultItem)
     .forEach(({ node, url }) => {
       utils.report({ message: messages.unexpected(url), node, result, ruleName });
     });
