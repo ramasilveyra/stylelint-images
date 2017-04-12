@@ -7,7 +7,9 @@
     "prepublish": "npm run build",
     "build": "babel src -d build -s --ignore __test__",
     "lint": "eslint .",
-    "test": "tape -r babel-register \"src/**/__test__/*.js\" | tap-spec"
+    "pretest": "npm run lint",
+    "test": "npm run test:only",
+    "test:only": "tape -r babel-register \"src/**/__test__/*.js\" | tap-spec"
   },
   "repository": {
     "type": "git",
