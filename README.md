@@ -1,6 +1,7 @@
 # stylelint-images
 
 [![NPM version](https://img.shields.io/npm/v/stylelint-images.svg)](https://www.npmjs.com/package/stylelint-images)
+[![Build Status](https://travis-ci.org/ramasilveyra/stylelint-images.svg?branch=master)](https://travis-ci.org/ramasilveyra/stylelint-images)
 
 A collection of rules to check images for [stylelint](https://github.com/stylelint/stylelint) (in a form of a plugin).
 
