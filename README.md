@@ -17,18 +17,18 @@ A collection of rules to check images for [stylelint](https://github.com/styleli
 
 stylelint-images is a plugin for [stylelint](http://stylelint.io/user-guide/), so it's meant to be used with it.
 
-**Node.js v4.2.1 or newer** is required. That's because stylelint itself [doesn't support Node.js versions below 4](https://github.com/stylelint/stylelint/blob/43b18fe4c56e9f177644b50354fb8efe9fb34a84/package.json#L36).
+**Node.js v6 or newer** is required. That's because stylelint itself [doesn't support Node.js versions below 6](https://github.com/stylelint/stylelint/blob/23be9ae81d024f08f7e09b2e3266b6c2972b85c0/package.json#L38).
 
 First, install stylelint-images (and stylelint, if you haven't done so yet) via NPM:
 
 ```
-npm install -D stylelint@^7.10.0 stylelint-images
+npm install -D stylelint@^9.1.0 stylelint-images
 ```
 
 Or if you use Yarn:
 
 ```
-yarn add stylelint@^7.10.0 stylelint-images -D
+yarn add stylelint@^9.1.0 stylelint-images -D
 ```
 
 ## Usage
