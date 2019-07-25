@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/ramasilveyra/stylelint-images#readme",
   "dependencies": {
-    "axios": "0.16.1",
+    "axios": "0.18.1",
     "lodash": "^4.17.4"
   },
   "peerDependencies": {
