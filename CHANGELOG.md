@@ -1,3 +1,7 @@
+# 2.0.1 (2019-12-28)
+
+- Fix: bump axios dep ([2c1c8](https://github.com/ramasilveyra/stylelint-images/commit/2c1c86a6805ad46886ead23a0be9e06f81bf05b2))
+
 # 2.0.0 (2018-02-25)
 
 - Breaking: Update to stylelint@^9.1.0 and drop node 4 support ([5e61b](https://github.com/ramasilveyra/stylelint-images/commit/5e61b08aca34cb7adefb5b49136b87f7ed353a10))

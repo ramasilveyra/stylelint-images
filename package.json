@@ -1,6 +1,6 @@
 {
   "name": "stylelint-images",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A collection of rules to check images for stylelint",
   "main": "build/index.js",
   "scripts": {
