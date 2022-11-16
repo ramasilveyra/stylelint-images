@@ -30,7 +30,7 @@
     "lodash": "^4.17.4"
   },
   "peerDependencies": {
-    "stylelint": "^9.1.0"
+    "stylelint": "^14.x"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
